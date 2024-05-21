@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 :root {
@@ -17,6 +17,7 @@
     align-items: center;
     width: 100%;
     flex-direction: column; 
+    background-color: white;
     
 }
 
@@ -190,6 +191,7 @@
     text-align: center;
     box-shadow: 2px 2px 5px 5px #f7f5f5;
     border-radius: 10px;
+    background-color: white;
 }
 .card__heading {
     font-weight: bold;
@@ -233,6 +235,7 @@
     height: 130px;
     transform: translateX(10%);
     box-shadow: 2px 2px 5px 5px #f7f5f5;
+    background-color: white;
 }
 
 .action {
@@ -250,6 +253,7 @@
 }
 
 .action__card {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,14 +265,432 @@
     font-size: 20px;
     text-align: center;
 }
-.peace__container{
-    z-index: 100;
-    background: rgb(223,234,246);
-   background: linear-gradient(86deg, rgba(223,234,246,1) 0%, rgba(255,255,255,1) 28%, rgba(255,255,255,1) 68%, rgba(255,233,230,1) 100%);
+.grad1 {
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    position: absolute; 
+    background: linear-gradient(
+        123.77deg,
+        #409AFF 0%,
+        
+        #409AFF 100%
+    );
+    z-index: 10;
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(2, 0, -0.03, 2, 0, 0);
+}
+.grad2 {
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    position: absolute; 
+    background: linear-gradient(
+        123.77deg,
+        #FF725E 0%,
+        
+        #FF725E 100%
+    );
+    z-index: 10;
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1.3, 0, -0.03, 1.3, 0, 0);
 }
 
+.grad1.left {
+    left: 0;
+    top: 0;
+}
+
+.grad2.right {
+    right: 6%;
+    top: 0;
+}
+
+.peace__container {
+    position: relative; 
+    z-index: 1; 
+    padding: 5% 0;
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.peace{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    width: 80%;
+    padding: 10%;
+    transform: translateY(-50%);
+}
+
+.peace__heading{
+    font-size: 34px;
+    font-weight: bold;
+}
+.peace__para {
+    font-size: 20px;
+}
+
+.pharma__partner {
+    transform: translateY(-30%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.pharma__upper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.pharma__lower {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    gap: 30px;
+    box-shadow: 1px 1px 5px 5px #dbd8d8;
+    border-radius: 30px;
+}
+.pharma__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+.pharma__lower__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: 
+    center;
+    width: 100%;
+    
+    
+}
+
+.pharma__right__upper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.pharma__right__upper__left {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pharma__p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.pharma__para {
+    font-size: 24px;
+}
+.q {
+    width: 40px;
+    height: 40px;
+}
+
+.faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.faq__lower {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+background: #ffffff;
+box-shadow:  27px 27px 81px #c7c7c7,
+             -27px -27px 81px #ffffff;
+}
+
+.faq__details {
+    
+    
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    padding: 0 0 10px 10px;
+    box-sizing: border-box; 
+}
+
+.faq__sum {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    
+    transition: background-color 0.3s ease; 
+    box-sizing: border-box; 
+}
+
+.faq__sum:hover {
+    color: #409AFF;
+}
+
+.faq__sum p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.faq__details[open] summary {
+    background-color: var(--blue); 
+    box-shadow: 1px -1px 2px 2px var(--blue);
+    color: white;
+    outline: none;
+}
+
+.det__p {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.contact {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.contact__lower {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 16px;
+background: #ffffff;
+box-shadow:  27px 27px 81px #c7c7c7,
+             -27px -27px 81px #ffffff;
+    padding: 4%;
+}
+.contact__lower__upper {
+    display: flex;
+    flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     width: 100%;
+}
+.contact__lower__upper__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 100%;
+}
+.input {
+    width: 380px;
+    background-color: #FCFCFC;
+    border: 2px solid #C7C7C7;
+    border-radius: 4px;
+    padding: 
+    8px 12px 8px 12px;
+}
+
+.input-box {
+    height: 180px;
+}
+.input-box::placeholder {
+    position: absolute;
+    top: 10px;
+}
+label {
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #006FED1F;
+    gap: 30px;
+    padding: 5%;
+    border-radius: 30px;
+}
+.footer__container {
+    padding: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 40%;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer__bold {
+    font-weight: bold;
+    font-size: 22px;
+}
+.left__upper ,.left__mid ,.left__lower{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.mid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+}
+.mid__lower {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+    
+}
+.link {
+    text-decoration: none;
+    color: black;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    width: 30%;
+}
+.right__lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.icon__container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    border-radius: 50%;
+}
 @media (max-width: 768px) {
 
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left  , .right {
+        width: 100%;
+    }
+    .mid{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .contact__lower__upper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .input {
+        width: 200px;
+    }
+    .contact__lower__upper__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .faq__lower{
+        width: 95%;
+        
+    }
+    .action__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .pharma__para{
+        font-size: 18px;
+    }
+    .para1 {
+        
+        text-align: center;
+    }
+    .pharma__partner{
+        transform: translateY(0);
+        padding: 2%;
+    }
+    .pharma__video {
+          width: 300px;
+          height: 300px;
+    }
+    .pharma__lower{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .peace{
+        width: 100%;
+        transform: translateY(0);
+    }
+    .peace__heading{
+        font-size: 24px;
+    }
+    .peace__para {
+        font-size: 19px;
+    }
+    .grad1{
+        display: none;
+    }
+    .grad2 {
+        display: none;
+    }
+    .action__lower{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
     .digital__landscape__right img {
         width: 90%;
     }
